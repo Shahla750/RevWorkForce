@@ -1,0 +1,13 @@
+2026-02-04 01:31:17.676 [main] DEBUG com.revworkforce.config.DatabaseConfig - Database connection established
+2026-02-04 01:31:18.079 [main] INFO  com.revworkforce.service.AuthService - User logged in successfully: EMP001
+2026-02-04 01:31:30.019 [main] DEBUG com.revworkforce.config.DatabaseConfig - Database connection established
+2026-02-04 01:31:30.321 [main] DEBUG com.revworkforce.config.DatabaseConfig - Database connection established
+2026-02-04 01:31:31.207 [main] DEBUG com.revworkforce.config.DatabaseConfig - Database connection established
+2026-02-04 09:40:04.618 [main] INFO  com.revworkforce.config.DatabaseConfig - Configuration loaded successfully
+2026-02-04 09:40:04.663 [main] INFO  com.revworkforce.config.DatabaseConfig - Database driver loaded successfully
+2026-02-04 09:40:05.056 [main] DEBUG com.revworkforce.config.DatabaseConfig - Database connection established
+2026-02-04 09:40:05.056 [main] INFO  com.revworkforce.config.DatabaseConfig - Database connection test successful
+2026-02-04 10:47:27.408 [main] INFO  com.revworkforce.config.DatabaseConfig - Configuration loaded successfully
+2026-02-04 10:47:27.452 [main] INFO  com.revworkforce.config.DatabaseConfig - Database driver loaded successfully
+2026-02-04 10:47:27.838 [main] DEBUG com.revworkforce.config.DatabaseConfig - Database connection established
+2026-02-04 10:47:27.839 [main] INFO  com.revworkforce.config.DatabaseConfig - Database connection test successful

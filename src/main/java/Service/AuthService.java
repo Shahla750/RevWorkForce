@@ -4,10 +4,13 @@ import DAO.EmployeeDAO;
 import Model.Employee;
 
 public class AuthService {
+    private final EmployeeDAO employeeDAO = new EmployeeDAO();
 
-	private EmployeeDAO dao = new EmployeeDAO();
+    public Employee authenticate(String empId, String password) {
+        return employeeDAO.authenticate(empId, password);
+    }
 
-    public Employee login(String email, String password) {
-        return dao.login(email, password);
+    public void updatePassword(int empId, String newPassword) {
+        // Implement password update logic (hash and update in DAO)
     }
 }

@@ -1,0 +1,11 @@
+2026-02-03 13:12:56.646 [main] WARN  com.revworkforce.dao.UserDAO - Authentication failed for user: ADMIN001
+2026-02-03 13:13:21.173 [main] INFO  com.revworkforce.dao.UserDAO - User authenticated successfully: ADMIN001
+2026-02-03 13:16:44.348 [main] INFO  com.revworkforce.dao.EmployeeDAO - Retrieved 5 potential managers
+2026-02-03 13:17:00.824 [main] INFO  com.revworkforce.dao.UserDAO - User created successfully: EMP004
+2026-02-03 13:17:00.988 [main] INFO  com.revworkforce.dao.EmployeeDAO - Employee created successfully with ID: 9
+2026-02-03 13:17:01.305 [main] INFO  com.revworkforce.dao.LeaveDAO - Assigned leave quotas to employee 9 for year 2026: 4 leave types
+2026-02-03 13:17:01.349 [main] INFO  com.revworkforce.dao.LeaveDAO - Retrieved 4 leave types
+2026-02-03 14:07:10.177 [main] INFO  com.revworkforce.dao.EmployeeDAO - Retrieved 9 employees
+2026-02-04 01:31:18.074 [main] INFO  com.revworkforce.dao.UserDAO - User authenticated successfully: EMP001
+2026-02-04 01:31:30.343 [main] INFO  com.revworkforce.dao.LeaveDAO - Retrieved 3 leave balances for employee ID: 2
+2026-02-04 01:31:31.215 [main] INFO  com.revworkforce.dao.LeaveDAO - Retrieved 3 leave applications for employee ID: 2
