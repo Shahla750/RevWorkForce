@@ -1,113 +1,346 @@
-PROJECT REQUIREMENTS COMPLIANCE ANALYSIS
-✅ WHAT YOUR PROJECT HAS:
-1. Software Tools:
+RevWorkforce – Human Resource Management System
+📌 Project Overview
 
-✅ IDE: IntelliJ IDEA (.idea/ folder present)/Eclipse IDE
-⚠️ JDK: Java 17 (Requirement says Java 21, but 17 is acceptable)
-✅ RDBMS: Oracle Database
-⚠️ Unit Testing: JUnit 4 (Requirement says JUnit 5)
-✅ Logging: Log4j2 (Requirement met)
-2. Database Development:
+RevWorkforce is a console-based Human Resource Management System (HRMS) developed using Core Java and Oracle Database.
+The application follows a layered MVC architecture with DAO pattern and manages the complete employee lifecycle, including authentication, leave management, performance tracking, and notifications.
 
-✅ SQL script to create schema objects (schema.sql)
-✅ SQL script to populate master tables (departments, designations, leave types)
-❌ MISSING: Stored procedures and functions
-❌ MISSING: Database triggers
-✅ Constraints applied properly (FK, PK, CHECK, UNIQUE)
-✅ Transaction management in service layer
-3. Application Development:
+This project was developed as an enterprise-style Java application with focus on clean architecture, security, database integrity, and coding standards.
+🛠 Technology Stack
+CategoryTechnologyProgramming LanguageJava 17IDEIntelliJ IDEA / EclipseDatabaseOracle DatabaseDatabase AccessJDBCBuild ToolMavenLoggingLog4j2Unit TestingJUnit 4ArchitectureMVC + DAO Pattern
 
-✅ Menu-driven application
-✅ Layered architecture (View, Service, DAO)
-✅ JDBC API usage
-❌ MISSING: Custom user-defined exceptions
-✅ Collections framework usage (List, ArrayList, Stream API)
-⚠️ PARTIAL: toString() implemented, but equals() and hashCode() missing
-❌ MISSING: Comparable/Comparator interfaces
-❌ MISSING: Text files for data storage
-4. Coding Standards:
+⚠️ Note: Requirement mentioned Java 21 and JUnit 5, but Java 17 and JUnit 4 were used due to compatibility and stability.
 
-⚠️ PARTIAL: Some comments present, but not comprehensive
-✅ Proper indentation and spacing
-✅ Meaningful names following Java conventions
-5. Documentation:
 
-❌ MISSING: UML Class Diagram
-✅ Database ERD diagram created
-❌ MISSING: Test data documentation
-❌ MISSING: I/O format documentation
-ENGLISH EXPLANATION FOR INTERVIEWER
-PROJECT OVERVIEW:
-"I developed RevWorkforce, a comprehensive Human Resource Management System using Java 17 and Oracle Database. It's a console-based enterprise application that follows MVC architecture with DAO pattern for managing employee lifecycle, leave management, and performance tracking."
+📂 Project Structure
+RevWorkforce/
+│
+├── src/main/java/com/revworkforce
+│   ├── view        (Presentation Layer)
+│   ├── service     (Business Logic Layer)
+│   ├── dao         (Data Access Layer)
+│   ├── model       (Entity Classes)
+│   ├── util        (Utility & Config classes)
+│
+├── src/main/resources
+│   ├── schema.sql
+│   ├── data.sql
+│   ├── log4j2.xml
+│
+├── pom.xml
+└── README.md
 
-ARCHITECTURE:
-"The application has a three-tier layered architecture:
 
-1. Presentation Layer (View Package):
+🧱 Architecture Overview
+The application follows a three-tier layered architecture:
+1️⃣ Presentation Layer (View Package)
+Handles user interaction and menu-driven console UI.
 
-LoginView for authentication
-AdminDashboard for administrative operations
-ManagerDashboard for team management
-EmployeeDashboard for employee self-service
-2. Business Logic Layer (Service Package):
+LoginView – User authentication
 
-AuthService handles authentication and authorization
-EmployeeService manages employee operations
-LeaveService handles leave workflows
-PerformanceService manages reviews and goals
-NotificationService handles system notifications
-3. Data Access Layer (DAO Package):
+AdminDashboard – Administrative operations
 
-UserDAO for user authentication queries
-EmployeeDAO for employee CRUD operations
-LeaveDAO for leave-related database operations
-PerformanceDAO for performance data
-NotificationDAO for notification management
-All DAO classes use JDBC with PreparedStatement to prevent SQL injection and ensure secure database operations."
+ManagerDashboard – Team and leave approvals
 
-DATABASE DESIGN:
+EmployeeDashboard – Employee self-service
 
-"I designed a normalized database schema with 12 tables:
 
-Core tables: Users, Employees, Departments, Designations Leave management: Leave_Types, Leave_Balances, Leave_Applications Performance: Performance_Reviews, Goals, Goal_Progress Others: Notifications, Company_Holidays
+2️⃣ Business Logic Layer (Service Package)
+Contains business rules and transaction management.
 
-The database has proper referential integrity with foreign key constraints, check constraints for data validation, and a self-referencing relationship for the manager-employee hierarchy."
+AuthService – Authentication & authorization
 
-KEY FEATURES:
-"The system has 5 major modules:
+EmployeeService – Employee management
 
-1. Authentication Module: Secure login with SHA-256 password hashing and role-based access control
+LeaveService – Leave workflow handling
 
-2. Employee Management: Complete CRUD operations with department and designation assignment
+PerformanceService – Reviews and goals
 
-3. Leave Management: Automated workflow - employees apply, managers approve/reject, and the system automatically updates leave balances
 
-4. Performance Management: Annual reviews with self-assessment, manager feedback, goal setting, and progress tracking
+NotificationService – System notifications
 
-5. Notification System: Real-time notifications for leave status updates and performance reminders"
 
-TECHNOLOGY STACK:
-"Backend: Core Java 17 with JDBC for database connectivity Database: Oracle Database with 12 normalized tables Build Tool: Maven for dependency management Logging: Log4j2 with file rotation and multiple log levels Testing: JUnit 4 for unit testing critical modules"
 
-COLLECTIONS USAGE:
-"I extensively used the Java Collections Framework:
+3️⃣ Data Access Layer (DAO Package)
+Handles all database interactions using JDBC.
 
-ArrayList for dynamic employee lists
-List interface for method return types
-Stream API for filtering and data transformation
-For example, filtering pending leave applications or calculating total leave balances"
-SECURITY IMPLEMENTATION:
 
-"I implemented multiple security layers:
+UserDAO
 
-Password hashing using SHA-256
-PreparedStatement to prevent SQL injection
-Input validation for email, phone, dates
-Role-based access control
-Session management"
-LOGGING:
-"I configured Log4j2 with three appenders:
 
-Console appender for real-time monitoring
-File appender for persistent logs
-Rolling file appender with automatic rotation when files reach 10MB Different log levels (DEBUG, INFO, WARN, ERROR) for different modules"s
+EmployeeDAO
+
+
+LeaveDAO
+
+
+PerformanceDAO
+
+
+NotificationDAO
+
+
+✔ Uses PreparedStatement to prevent SQL injection
+✔ Ensures clean separation of concerns
+
+🗄 Database Design
+📊 Database Schema
+The system uses 12 normalized tables:
+Core Tables
+
+
+Users
+
+
+Employees
+
+
+Departments
+
+
+Designations
+
+
+Leave Management
+
+
+Leave_Types
+
+
+Leave_Balances
+
+
+Leave_Applications
+
+
+Performance Management
+
+
+Performance_Reviews
+
+
+Goals
+
+
+Goal_Progress
+
+
+Others
+
+
+Notifications
+
+
+Company_Holidays
+
+
+✔ Primary Keys, Foreign Keys
+✔ CHECK and UNIQUE constraints
+✔ Self-referencing manager–employee hierarchy
+
+⚙️ Key Features
+🔐 Authentication Module
+
+
+Secure login
+
+
+SHA-256 password hashing
+
+
+Role-based access control (Admin, Manager, Employee)
+
+
+👥 Employee Management
+
+
+Full CRUD operations
+
+
+Department & designation mapping
+
+
+🏖 Leave Management
+
+
+Apply / approve / reject workflow
+
+
+Automatic leave balance updates
+
+
+📈 Performance Management
+
+
+Annual reviews
+
+
+Self-assessment
+
+
+Manager feedback
+
+
+Goal tracking
+
+
+🔔 Notification System
+
+
+Leave status updates
+
+
+Performance reminders
+
+
+
+📚 Collections Framework Usage
+The Java Collections Framework is used extensively:
+
+
+ArrayList for dynamic data storage
+
+
+List interface for abstraction
+
+
+Stream API for:
+
+
+Filtering pending leave requests
+
+
+Calculating leave balances
+
+
+Transforming result sets
+
+
+
+
+
+🔒 Security Implementation
+
+
+SHA-256 password hashing
+
+
+JDBC PreparedStatement to prevent SQL injection
+
+
+Input validation (email, phone, dates)
+
+
+Role-based authorization
+
+
+Session handling
+
+
+
+📝 Logging
+Log4j2 is configured with:
+
+
+Console Appender
+
+
+File Appender
+
+
+Rolling File Appender (10MB rotation)
+
+
+Log Levels:
+
+
+DEBUG
+
+
+INFO
+
+
+WARN
+
+
+ERROR
+
+
+
+🧪 Testing
+
+
+Unit testing done using JUnit 4
+
+
+Focused on service and DAO layers
+
+
+
+⚠️ Upgrade to JUnit 5 planned
+
+
+✅ Project Requirements Compliance
+✔ Implemented
+
+
+Menu-driven console application
+
+
+Layered architecture (MVC + DAO)
+
+
+JDBC with transaction management
+
+
+Oracle SQL scripts for schema & master data
+
+
+Constraints (PK, FK, CHECK, UNIQUE)
+
+Log4j2 logging
+
+Maven dependency management
+
+⚠️ Partially Implemented
+
+Java version (17 instead of 21)
+
+JUnit 4 instead of JUnit 5
+
+toString() implemented, but equals() & hashCode() pending
+
+Limited inline documentation
+
+❌ Not Implemented (Planned Enhancements)
+
+Stored procedures & functions
+
+Database triggers
+
+Custom user-defined exceptions
+
+Comparable / Comparator usage
+
+File-based text storage
+
+UML Class Diagram
+
+Test data & I/O format documentation
+
+
+🚀 Future Enhancements
+
+Upgrade to Java 21 & JUnit 5
+
+Add stored procedures, triggers
+
+Implement custom exceptions
+
+Add UML class diagram
+
+Improve documentation coverage
+
+Introduce file-based backup storage
+
+
+
