@@ -14,6 +14,7 @@ CategoryTechnologyProgramming LanguageJava 17IDEIntelliJ IDEA / EclipseDatabaseO
 
 📂 Project Structure
 RevWorkforce/
+
 │
 ├── src/main/java/com/revworkforce
 │   ├── view        (Presentation Layer)
